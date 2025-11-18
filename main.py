@@ -20,26 +20,24 @@ def load_model():
     # Return the ready-to-use model
     return model
 
+# Function to prepare the input image for the MobileNetV2 model
 def preprocess_image(image):
+
+    # Convert the PIL Image object into a NumPy array for processing
     img = np.array(image)
+
+    # Resize the image to 224x224 pixels, the required input size for MobileNetV2
     img = cv2.resize(img, (224, 224))
+
+    # Apply MobileNetV2-specific preprocessing (e.g., scaling pixel values)
     img = preprocess_input(img)
+
+    # Add an extra dimension (batch dimension) to make the array shape (1, 224, 224, 3)
+    # This is required because the model expects a batch of images, even if it's just one.
     img = np.expand_dims(img, axis=0)
+
+    # Return the fully preprocessed image array
     return img
 
-def classify_image(model, image):
-    try:
-        precessed_image = preprocess_image(image)
-        predictions = model.predict(preprocess_image)
-        decoded_predictions = decode_predictions(predictions, top=3)[0]
-        return decoded_predictions
-    
-    except Exception as e:
-        st.error(f"Error classifying image: {srt(e)}")
 
-def main():
-    st.set_page_config(page_title="AI Image Classifier", page_icon="🖼️", layout="centered")
-
-    st.title("AI Image Classifier")
-    
 
