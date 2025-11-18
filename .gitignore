@@ -1,0 +1,81 @@
+# --------------------
+# Python
+# --------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.pickle
+
+# Byte-compiled / cache
+*.so
+*.dll
+*.dylib
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Virtual environments
+venv/
+.env/
+env/
+.venv/
+
+# --------------------
+# Jupyter / Data Science
+# --------------------
+.ipynb_checkpoints/
+*.ipynb~
+
+# Data files (optional)
+*.csv
+*.tsv
+*.parquet
+*.h5
+*.db
+*.sqlite
+*.sqlite3
+
+# TensorFlow Checkpoints / Model files
+checkpoints/
+*.ckpt
+*.ckpt.*
+logs/
+tensorboard/
+
+# --------------------
+# OS / Editor Specific
+# --------------------
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# VSCode
+.vscode/
+
+# PyCharm / JetBrains
+.idea/
+
+# --------------------
+# Environment / Security
+# --------------------
+# Python environment / secrets
+.env
+*.env
+
+# Ignore local dotenv files
+.env.*.local
+
+# --------------------
+# Git
+# --------------------
+# Local ignore rules
+.gitignore_local
