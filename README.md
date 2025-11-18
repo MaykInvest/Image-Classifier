@@ -34,11 +34,15 @@ Users can upload an image, and the app will predict the top 3 most likely object
 
 ```
 📦 ai-image-classifier
- ┣ 📜 app.py              # Main Streamlit application
+
+ ┣ 📜 .gitignore          # Gitignore file
+ ┣ 📜 Dog.jpg             # Image of a Dog
+ ┣ 📜 LICENSE             # MIT License
+ ┣ 📜 main.py             # Main Streamlit application
  ┣ 📜 README.md           # Project documentation
  ┣ 📜 requirements.txt    # Python dependencies
+ 
 ```
-
 ---
 
 ## ⚙️ **Installation & Setup**
@@ -46,7 +50,7 @@ Users can upload an image, and the app will predict the top 3 most likely object
 ### 1️⃣ Clone the repository
 
 - git clone https://github.com/your-username/ai-image-classifier.git
-- cd ai-image-classifier
+- cd image-classifier
 
 
 ### 2️⃣ Create a virtual environment (recommended)
@@ -62,12 +66,11 @@ Users can upload an image, and the app will predict the top 3 most likely object
 
 ---
 
-## ▶️ **Run the Application**
+## ▶️ **Run the Application**  
 
 - streamlit run app.py
 
-
-Your browser will automatically open at:
+Your browser will automatically open to (you will need to create an account at "https://streamlit.io/"):
 
 http://localhost:8501
 
@@ -105,15 +108,15 @@ Streamlit handles:
 ## 📝 **Example Output**
 
 **Uploaded image:**
-A picture of a cat.
+A picture of a Dog.
 
 **Predictions:**
 
-| Label        | Confidence |
-| ------------ | ---------- |
-| tabby cat    | 72.3%      |
-| Egyptian cat | 18.7%      |
-| tiger cat    | 5.9%       |
+| Label         | Confidence |
+| ------------  | ---------- |
+| Border_collie | 41.17%     | 
+| borzoi        | 21.45%     |
+| collie        | 19.67%     |
 
 ---
 
@@ -144,5 +147,4 @@ Contributions, issues, and feature requests are welcome!
 ## 📄 **License**
 
 This project is open-source under the **MIT License**.
-
 ---
